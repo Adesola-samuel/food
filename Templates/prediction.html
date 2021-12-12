@@ -1,0 +1,248 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container">
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="row"><p class="text-center text-danger">{{error}}</p></div>
+
+        <div class='row'>
+            <div class=''>{{ form.educational_level|as_crispy_field}}</div>
+        </div>
+        <div class='row'>
+            <div class=''>{{ form.gender|as_crispy_field}}</div>
+        </div>
+        <div class='row'>
+            <div class=''>{{ form.source_of_income|as_crispy_field}}</div>
+        </div>
+        <div class='row'>
+            <div class=''>{{ form.do_you_avoid_any_kind_of_food|as_crispy_field}}
+            </div>
+        </div>
+        <div class='row'>
+            <div class=''>{{ form.do_you_have_a_meal_time_table|as_crispy_field}}
+            </div>
+        </div>
+        <br>
+        <div class="row"><p class="lead">How often do you eat these foods?</p></div>
+        <hr>
+
+        <div class='col col-md-4' style='box-shadow:0 0 1px black inset;'>
+            <div class='row'>
+                <div class='col col-md-12'><img src="{% static 'img/dish/pexels-deeana-arts-2894651.jpg' %}" alt=""
+                                                height="200" width="100%"></div>
+            </div>
+            <div class='row'>
+                <div class=''>{{ form.vegetables|as_crispy_field}}</div>
+            </div>
+        </div>
+        <div class='col col-md-4' style='box-shadow:0 0 1px black inset;'>
+            <div class='row'>
+                <div class='col col-md-12'><img src="{% static 'img/dish/pexels-anna-tis-10211440.jpg' %}" alt=""
+                                                height="200" width="100%"></div>
+            </div>
+            <div class='row'>
+                <div class=''>{{ form.red_meat|as_crispy_field}}</div>
+            </div>
+        </div>
+        <div class='col col-md-4' style='box-shadow:0 0 1px black inset;'>
+            <div class='row'>
+                <div class='col col-md-12'><img src="{% static 'img/dish/pexels-katarina-pjatakova-33406.jpg' %}" alt=""
+                                                height="200" width="100%"></div>
+            </div>
+            <div class='row'>
+                <div class=''>{{ form.chicken|as_crispy_field}}</div>
+            </div>
+        </div>
+        <div class='col col-md-4' style='box-shadow:0 0 1px black inset;'>
+            <div class='row'>
+                <div class='col col-md-12'><img src="{% static 'img/dish/pexels-rachel-claire-6752178.jpg' %}" alt=""
+                                                height="200" width="100%"></div>
+            </div>
+            <div class='row'>
+                <div class=''>{{ form.fish|as_crispy_field}}</div>
+            </div>
+        </div>
+        <div class='col col-md-4' style='box-shadow:0 0 1px black inset;'>
+            <div class='row'>
+                <div class='col col-md-12'><img src="{% static 'img/dish/pexels-charlotte-may-5946717.jpg' %}" alt=""
+                                                height="200" width="100%"></div>
+            </div>
+            <div class='row'>
+                <div class=''>{{ form.milk|as_crispy_field}}</div>
+            </div>
+        </div>
+        <div class='col col-md-4' style='box-shadow:0 0 1px black inset;'>
+            <div class='row'>
+                <div class='col col-md-12'><img src="{% static 'img/dish/pexels-polina-tankilevitch-3872373.jpg' %}"
+                                                alt="" height="200" width="100%"></div>
+            </div>
+            <div class='row'>
+                <div class=''>{{ form.dairy_product|as_crispy_field}}</div>
+            </div>
+        </div>
+        <div class='col col-md-4' style='box-shadow:0 0 1px black inset;'>
+            <div class='row'>
+                <div class='col col-md-12'><img src="{% static 'img/dish/pexels-roman-odintsov-4869431.jpg' %}" alt=""
+                                                height="200" width="100%"></div>
+            </div>
+            <div class='row'>
+                <div class=''>{{ form.egg|as_crispy_field}}</div>
+            </div>
+        </div>
+        <div class='col col-md-4' style='box-shadow:0 0 1px black inset;'>
+            <div class='row'>
+                <div class='col col-md-12'><img src="{% static 'img/dish/pexels-marta-dzedyshko-2067621.jpg' %}" alt=""
+                                                height="200" width="100%"></div>
+            </div>
+            <div class='row'>
+                <div class=''>{{ form.bread|as_crispy_field}}</div>
+            </div>
+        </div>
+        <div class='col col-md-4' style='box-shadow:0 0 1px black inset;'>
+            <div class='row'>
+                <div class='col col-md-12'><img src="{% static 'img/dish/pexels-life-of-pix-128865.jpg' %}" alt=""
+                                                height="200" width="100%"></div>
+            </div>
+            <div class='row'>
+                <div class=''>{{ form.legumes|as_crispy_field}}</div>
+            </div>
+        </div>
+        <div class='col col-md-4' style='box-shadow:0 0 1px black inset;'>
+            <div class='row'>
+                <div class='col col-md-12'><img src="{% static 'img/dish/pexels-ivan-samkov-5799685.jpg' %}" alt=""
+                                                height="200" width="100%"></div>
+            </div>
+            <div class='row'>
+                <div class=''>{{ form.fruits|as_crispy_field}}</div>
+            </div>
+        </div>
+        <div class='col col-md-4' style='box-shadow:0 0 1px black inset;'>
+            <div class='row'>
+                <div class='col col-md-12'><img src="{% static 'img/dish/pexels-lisa-734983.jpg' %}" alt="" height="200"
+                                                width="100%"></div>
+            </div>
+            <div class='row'>
+                <div class=''>{{ form.tea|as_crispy_field}}</div>
+            </div>
+        </div>
+        <div class='col col-md-4' style='box-shadow:0 0 1px black inset;'>
+            <div class='row'>
+                <div class='col col-md-12'><img src="{% static 'img/dish/pexels-igor-haritanovich-1695052.jpg' %}"
+                                                alt="" height="200" width="100%"></div>
+            </div>
+            <div class='row'>
+                <div class=''>{{ form.coffee|as_crispy_field}}</div>
+            </div>
+        </div>
+        <div class='col col-md-4' style='box-shadow:0 0 1px black inset;'>
+            <div class='row'>
+                <div class='col col-md-12'><img src="{% static 'img/dish/pexels-photomix-company-96974.jpg' %}" alt=""
+                                                height="200" width="100%"></div>
+            </div>
+            <div class='row'>
+                <div class=''>{{ form.fresh_juice|as_crispy_field}}</div>
+            </div>
+        </div>
+        <div class='col col-md-4' style='box-shadow:0 0 1px black inset;'>
+            <div class='row'>
+                <div class='col col-md-12'><img src="{% static 'img/dish/pexels-any-lane-5946073.jpg' %}" alt=""
+                                                height="200" width="100%"></div>
+            </div>
+            <div class='row'>
+                <div class=''>{{ form.soft_juice|as_crispy_field}}</div>
+            </div>
+        </div>
+        <div class='col col-md-4' style='box-shadow:0 0 1px black inset;'>
+            <div class='row'>
+                <div class='col col-md-12'><img src="{% static 'img/dish/065069b927867cf1946c8378bfa182a7.jpg' %}"
+                                                alt="" height="200" width="100%"></div>
+            </div>
+            <div class='row'>
+                <div class=''>{{ form.eba|as_crispy_field}}</div>
+            </div>
+        </div>
+        <div class='col col-md-4' style='box-shadow:0 0 1px black inset;'>
+            <div class='row'>
+                <div class='col col-md-12'><img src="{% static 'img/dish/c16566d7b55bccbad1dc5df804aafd9e.jpg' %}"
+                                                alt="" height="200" width="100%"></div>
+            </div>
+            <div class='row'>
+                <div class=''>{{ form.fufu|as_crispy_field}}</div>
+            </div>
+        </div>
+        <div class='col col-md-4' style='box-shadow:0 0 1px black inset;'>
+            <div class='row'>
+                <div class='col col-md-12'><img src="{% static 'img/dish/57c0ce57d1a854c895dc3357d1db0d60.jpg' %}"
+                                                alt="" height="200" width="100%"></div>
+            </div>
+            <div class='row'>
+                <div class=''>{{ form.yam|as_crispy_field}}</div>
+            </div>
+        </div>
+        <div class='col col-md-4' style='box-shadow:0 0 1px black inset;'>
+            <div class='row'>
+                <div class='col col-md-12'><img src="{% static 'img/dish/pexels-alesia-kozik-6544227.jpg' %}" alt=""
+                                                height="200" width="100%"></div>
+            </div>
+            <div class='row'>
+                <div class=''>{{ form.rice|as_crispy_field}}</div>
+            </div>
+        </div>
+        <div class='col col-md-4' style='box-shadow:0 0 1px black inset;'>
+            <div class='row'>
+                <div class='col col-md-12'><img src="{% static 'img/dish/7734b76c96c324b04f84459c2b2d73d4.jpg' %}"
+                                                alt="" height="200" width="100%"></div>
+            </div>
+            <div class='row'>
+                <div class=''>{{ form.beans|as_crispy_field}}</div>
+            </div>
+        </div>
+        <div class='col col-md-4' style='box-shadow:0 0 1px black inset;'>
+            <div class='row'>
+                <div class='col col-md-12'><img src="{% static 'img/dish/f9dbe42f6631ac0a2770bd311f2bb7ae.jpg' %}"
+                                                alt="" height="200" width="100%"></div>
+            </div>
+            <div class='row'>
+                <div class=''>{{ form.elubo|as_crispy_field}}</div>
+            </div>
+        </div>
+        <div class='col col-md-4' style='box-shadow:0 0 1px black inset;'>
+            <div class='row'>
+                <div class='col col-md-12'><img src="{% static 'img/dish/pexels-marjhan-vis-ramboyong-7877991.jpg' %}"
+                                                alt="" height="200" width="100%"></div>
+            </div>
+            <div class='row'>
+                <div class=''>{{ form.maize|as_crispy_field}}</div>
+            </div>
+        </div>
+        <div class='col col-md-4' style='box-shadow:0 0 1px black inset;'>
+            <div class='row'>
+                <div class='col col-md-12'><img src="{% static 'img/dish/c1868f6e17c16891f5b594cce9a901e5.jpg' %}"
+                                                alt="" height="200" width="100%"></div>
+            </div>
+            <div class='row'>
+                <div class=''>{{ form.garri|as_crispy_field}}</div>
+            </div>
+        </div>
+        <div class='col col-md-4' style='box-shadow:0 0 1px black inset;'>
+            <div class='row'>
+                <div class='col col-md-12'><img src="{% static 'img/dish/images.jpeg' %}" alt="" height="200"
+                                                width="100%"></div>
+            </div>
+            <div class='row'>
+                <div class=''>{{ form.pounded_yam|as_crispy_field}}</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class='col col-md-12'>
+                <input type="submit" value="Submit" class="btn btn-danger btn-lg btn-block">
+            </div>
+        </div>
+        <br><br>
+
+        </form>
+    </div>
+    {% endblock content %}

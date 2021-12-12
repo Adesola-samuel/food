@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+<div class="hh pb-5">
+    <div class="container pt-5 hh">
+        <div class="pt-5">
+            <div class="card card-body">
+                <div class="p-3 mt-5 bg-light">
+                    <div class="">
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col col-md-6">
+                                    <div class="form-group">{{form.first_name|as_crispy_field}}</div>
+                                </div>
+                                <div class="col col-md-6">
+                                    <div class="form-group">{{form.last_name|as_crispy_field}}</div>
+                                </div>
+                            </div>
+                            <div class="form-group">{{form.username|as_crispy_field}}</div>
+                            <div class="form-group">{{form.email|as_crispy_field}}</div>
+                            <div class="form-group">{{form.password1|as_crispy_field}}</div>
+                            <div class="form-group">{{form.password2|as_crispy_field}}</div>
+                            <input type="submit" value="Sign up" class="btn btn-dark btn-block">
+                            <input type="reset" value="Clear" class="btn btn-info btn-block">
+                            <a href="{% url 'veriuser:login' %}"><p class="text-center text-info">Allready have an
+                                account</p></a>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <style>
+    .hh {
+        background: url({% static 'images/pexels-karolina-grabowska-4021775.jpg' %});
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+        opacity: 0.90;
+    }
+
+    body {
+        background: black;
+    }
+
+        </style>
+        {% endblock content %}
